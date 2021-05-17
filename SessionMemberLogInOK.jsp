@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <jsp:useBean id="IsMember" class="chapter10.MemberMgr"/>
-    <!-- ºó -->
+    <!-- ë¹ˆ -->
     <%
     String memberId="";
     String memberPw="";
@@ -10,18 +10,18 @@
     if(request.getParameter("memberpw") !=null)
     	memberPw = request.getParameter("memberpw");
     if(IsMember.PassCheck(memberId,memberPw)){
-    	//ÂüÀÌ¸é °á°úÆäÀÌÁö·ÎÀÌµ¿½ÃÅ²´Ù
+    	//ì°¸ì´ë©´ ê²°ê³¼í˜ì´ì§€ë¡œì´ë™ì‹œí‚¨ë‹¤
     	session.setAttribute("memID", memberId);
     	%>
     	<script>
-    	alert("·Î±×ÀÎ µÇ¾ú½À´Ï´Ù.");
+    	alert("ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.");
     	location.href="SessionLogInConfirm.jsp";
     	</script>
     	<%  }else{ %> 
-    	<!-- ½ÇÆĞÇÏ¸é °æ°í ·Î±×ÀÎÆûÀ¸·Î º¸³¿ -->
+    	<!-- ì‹¤íŒ¨í•˜ë©´ ê²½ê³  ë¡œê·¸ì¸í¼ìœ¼ë¡œ ë³´ëƒ„ -->
     	<script>
-    	alert("·Î±×ÀÎ µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
-    	location.href="SessionMemberLogIn.jsp"
+    	alert("ë¡œê·¸ì¸ ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+    	location.href="SessionMemberLogIn.jsp";
     	</script>
     <% } %>
     
