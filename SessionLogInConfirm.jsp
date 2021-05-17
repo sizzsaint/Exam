@@ -5,10 +5,10 @@ String memberId = (String)session.getAttribute("memID");
 if(memberId == null){
 %>
 <script>
-alert("·Î±×ÀÎ µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+alert("ë¡œê·¸ì¸ ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
 location.href="SessionMemberLogIn.jsp";
 </script>
-<!-- ¼¼¼ÇÃ¼Å© -->
+<!-- ì„¸ì…˜ì²´í¬ -->
 
 <%} %>
 <html>
@@ -29,10 +29,10 @@ location.href="SessionMemberLogIn.jsp";
 <tr>
 <td><div align="center">
 <strong><%=memberId %></strong>
-´ÔÀÌ ·Î±×ÀÎ ÇÏ¼Ì½À´Ï´Ù.
+ë‹˜ì´ ë¡œê·¸ì¸ í•˜ì…¨ìŠµë‹ˆë‹¤.
 </div></td>
 <td><div align="center">
-<a href="SessionLogOut.jsp"><strong>LogOut</strong></a>
+<a href="SessionLogOut.jsp"><strong>LOGOUT</strong></a>
 </div></td>
 </tr>
 </table>
